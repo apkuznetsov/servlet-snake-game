@@ -1,5 +1,5 @@
-<%@ page contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1" %>
+<%@ page contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 
 <!DOCTYPE html PUBLIC
 "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -10,17 +10,17 @@
 <head>
     <meta http-equiv="Content-Type"
           content="text/html; charset=ISO-8859-1">
-    <style type="stylesheet">
+    <style>
         <%@include file="/WEB-INF/css/style.css" %>
     </style>
 
-    <title>??????</title>
+    <title>Начало</title>
 </head>
 
 <body>
-<h1>??????</h1>
+<h1>Начало</h1>
 
-<div class="div-form">
+<div class="canvas-like-div">
     <form action="${pageContext.request.contextPath}/"
           method="post">
 
