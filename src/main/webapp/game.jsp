@@ -139,9 +139,20 @@
     createApple();
         } else {
             snake.pop();
-    }
+        }
     }
 
+    function drawSnake() {
+        snake.forEach(drawSnakePart)
+    }
+
+    function drawSnakePart(snakePart) {
+        gameCanvas.fillStyle = SNAKE_COLOR;
+        gameCanvas.strokestyle = SNAKE_BORDER_COLOR;
+        gameCanvas.fillRect(snakePart.x, snakePart.y, 10, 10);
+        gameCanvas.strokeRect(snakePart.x, snakePart.y, 10, 10);
+    }
+    
     function changeSnakeDirection(event) {
         const keyPress = event.keyCode;
         const ARROW_LEFT = 37;
