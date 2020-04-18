@@ -55,6 +55,18 @@
     gameCanvas.fillRect(0, 0, canvas.width, canvas.height);
     gameCanvas.strokeRect(0, 0, canvas.width, canvas.height);
 
+    function createApple() {
+        appleXdir = randomTen(0, canvas.width - 10);
+        appleYdir = randomTen(0, canvas.height - 10);
+
+        snake.forEach(function checkIsOnSnake(part) {
+            if (part.x === appleXdir &&
+                part.y === appleYdir) {
+    createApple();
+            }
+        });
+    }
+
 </script>
 </body>
 </html>
