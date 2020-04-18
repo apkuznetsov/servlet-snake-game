@@ -24,7 +24,10 @@
     <form action="${pageContext.request.contextPath}/"
           method="post">
 
-        <input type="submit" value=Submit class="button">
+        <div class="centered">
+            <input type="submit"
+                   value=Начать>
+        </div>
     </form>
 </div>
 </body>
