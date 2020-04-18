@@ -106,13 +106,6 @@
         gameCanvas.strokeRect(0, 0, canvas.width, canvas.height);
     }
 
-    function drawApple() {
-        gameCanvas.fillStyle = APPLE_COLOR;
-        gameCanvas.strokestyle = APPLE_BORDER_COLOR;
-        gameCanvas.fillRect(appleXdir, appleYdir, 10, 10);
-        gameCanvas.strokeRect(appleXdir, appleYdir, 10, 10);
-    }
-
     function createApple() {
         appleXdir = randomTen(0, canvas.width - 10);
         appleYdir = randomTen(0, canvas.height - 10);
@@ -120,7 +113,35 @@
         snake.forEach(function checkIsOnSnake(part) {
             if (part.x === appleXdir &&
                 part.y === appleYdir) {
+                createApple();
+            }
+        });
+    }
+
+    function drawApple() {
+        gameCanvas.fillStyle = APPLE_COLOR;
+        gameCanvas.strokestyle = APPLE_BORDER_COLOR;
+        gameCanvas.fillRect(appleXdir, appleYdir, 10, 10);
+        gameCanvas.strokeRect(appleXdir, appleYdir, 10, 10);
+    }
+
+    function moveSnake() {
+        const movedHead = {x: snake[0].x + xdir, y: snake[0].y + ydir};
+        snake.unshift(movedHead);
+
+        const didEatApple =
+            snake[0].x === appleXdir &&
+            snake[0].y === appleYdir;
+
+        if (didEatApple) {
+            score += 1;
+            document.getElementById('score').innerHTML = score;
     createApple();
+        } else {
+            snake.pop();
+    }
+    }
+
             }
         });
     }
