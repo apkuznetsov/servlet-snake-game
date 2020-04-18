@@ -6,14 +6,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/menu")
-public class MenuServlet extends HttpServlet {
+@WebServlet("/about")
+public class AboutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        final String menuJsp = "/menu.jsp";
+        final String startJsp = "/about.jsp";
         RequestDispatcher dispatcher = getServletContext().
-                getRequestDispatcher(menuJsp);
+                getRequestDispatcher(startJsp);
         dispatcher.forward(request, response);
     }
 }

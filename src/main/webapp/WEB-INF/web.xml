@@ -14,6 +14,11 @@
         <servlet-class>GameServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>AboutServlet</servlet-name>
+        <servlet-class>AboutServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>MenuServlet</servlet-name>
         <url-pattern>/</url-pattern>
@@ -22,6 +27,11 @@
     <servlet-mapping>
         <servlet-name>GameServlet</servlet-name>
         <url-pattern>/game</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AboutServlet</servlet-name>
+        <url-pattern>/about</url-pattern>
     </servlet-mapping>
 
 </web-app>
