@@ -23,12 +23,13 @@ form {
 
 .canvas-like-div {
     display: block;
+    position: relative;
     width: 300px;
     height: 300px;
     margin: 0 auto;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: black;
-    position: relative;
+    overflow: auto;
 }
 
 .button-group {
@@ -67,4 +68,18 @@ canvas {
     margin: 0 auto;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: black;
+}
+
+.about-div {
+    background-color: white;
+}
+
+.about-p {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.about-li {
+    font-size: 16px;
 }
