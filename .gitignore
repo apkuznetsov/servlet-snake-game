@@ -23,6 +23,7 @@
 hs_err_pid*
 
 target/
-.idea/workspace.xml
 
+.idea/workspace.xml
+.idea/uiDesigner.xml
 .idea/inspectionProfiles/Project_Default.xml
