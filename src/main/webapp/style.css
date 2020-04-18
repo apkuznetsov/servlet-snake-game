@@ -1,0 +1,117 @@
+body {
+    background-color: whitesmoke;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-family: cursive;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+form {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.form-div {
+    display: table;
+    width: 100%;
+}
+
+.canvas-like-div {
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: black;
+    position: relative;
+}
+
+.centered {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.button {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Bungee Inline', cursive;
+}
+
+
+h2 {
+    font-family: 'Bungee Inline', cursive;
+    font-size: 40px;
+
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color: black;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Bungee Inline', cursive;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
+.button {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+canvas {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin: 0 auto;
+}
+
+.current {
+    font-size: 17px;
+}
+
+table, th {
+    border: 1px solid black;
+}
+
+#confirm {
+    border: 3px solid black;
+}
+
