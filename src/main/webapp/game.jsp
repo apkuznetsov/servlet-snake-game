@@ -106,6 +106,13 @@
         gameCanvas.strokeRect(0, 0, canvas.width, canvas.height);
     }
 
+    function drawApple() {
+        gameCanvas.fillStyle = APPLE_COLOR;
+        gameCanvas.strokestyle = APPLE_BORDER_COLOR;
+        gameCanvas.fillRect(appleXdir, appleYdir, 10, 10);
+        gameCanvas.strokeRect(appleXdir, appleYdir, 10, 10);
+    }
+
     function createApple() {
         appleXdir = randomTen(0, canvas.width - 10);
         appleYdir = randomTen(0, canvas.height - 10);
