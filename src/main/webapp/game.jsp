@@ -55,6 +55,22 @@
     gameCanvas.fillRect(0, 0, canvas.width, canvas.height);
     gameCanvas.strokeRect(0, 0, canvas.width, canvas.height);
 
+    function startGame() {
+        if (isEndGame()) {
+            const doesWantToRefresh = confirm("Длина змейки: " + score + "\n" +
+                "Нажмите OK, чтобы продолжить");
+
+            if (doesWantToRefresh === true) {
+                location.reload();
+            } else if (doesWantToRefresh === false) {
+                window.location.href = "end.jsp";
+            }
+
+            return;
+        }
+
+    }
+
     function isEndGame() {
         return isSnakeCollision() || isWallCollision();
     }
