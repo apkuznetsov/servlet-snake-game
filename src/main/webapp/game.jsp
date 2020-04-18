@@ -47,6 +47,14 @@
     let xdir = 10;
     let ydir = 0;
 
+    const canvas = document.getElementById("game-canvas");
+    const gameCanvas = canvas.getContext("2d");
+
+    gameCanvas.fillStyle = CANVAS_BACKGROUND;
+    gameCanvas.strokestyle = CANVAS_BORDER_COLOR;
+    gameCanvas.fillRect(0, 0, canvas.width, canvas.height);
+    gameCanvas.strokeRect(0, 0, canvas.width, canvas.height);
+
 </script>
 </body>
 </html>
