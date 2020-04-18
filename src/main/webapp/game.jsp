@@ -99,6 +99,13 @@
             isBottomWallCollision;
     }
 
+    function clearGameCanvas() {
+        gameCanvas.fillStyle = CANVAS_BACKGROUND;
+        gameCanvas.strokestyle = CANVAS_BORDER_COLOR;
+        gameCanvas.fillRect(0, 0, canvas.width, canvas.height);
+        gameCanvas.strokeRect(0, 0, canvas.width, canvas.height);
+    }
+
     function createApple() {
         appleXdir = randomTen(0, canvas.width - 10);
         appleYdir = randomTen(0, canvas.height - 10);
