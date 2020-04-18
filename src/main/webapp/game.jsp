@@ -24,5 +24,16 @@
 <div id="current-score-title">Длина змейки: </div>
 <div id="score">0</div>
 
+<script type="">
+    const CANVAS_BORDER_COLOR = 'black';
+    const CANVAS_BACKGROUND = 'black';
+
+    const SNAKE_COLOR = 'pink';
+    const SNAKE_BORDER_COLOR = 'white';
+
+    const APPLE_COLOR = 'violet';
+    const APPLE_BORDER_COLOR = 'white';
+
+</script>
 </body>
 </html>
