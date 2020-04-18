@@ -20,5 +20,9 @@
 <body>
 <h1>Игра</h1>
 
+<canvas id="game-canvas" width="300" height="300"></canvas>
+<div id="current-score-title">Длина змейки: </div>
+<div id="score">0</div>
+
 </body>
 </html>
