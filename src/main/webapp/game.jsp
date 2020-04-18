@@ -21,7 +21,7 @@
 <h1>Игра</h1>
 
 <canvas id="game-canvas" width="300" height="300"></canvas>
-<div id="current-score-title">Длина змейки: </div>
+<div id="current-score-title">Длина змейки:</div>
 <div id="score">0</div>
 
 <script type="">
@@ -55,6 +55,10 @@
     gameCanvas.fillRect(0, 0, canvas.width, canvas.height);
     gameCanvas.strokeRect(0, 0, canvas.width, canvas.height);
 
+    startGame();
+    createApple();
+    document.addEventListener("keydown", changeSnakeDirection);
+
     function startGame() {
         if (isEndGame()) {
             const doesWantToRefresh = confirm("Длина змейки: " + score + "\n" +
@@ -69,6 +73,14 @@
             return;
         }
 
+        setTimeout(function onTick() {
+            clearGameCanvas();
+            drawApple();
+            moveSnake();
+            drawSnake();
+
+            startGame();
+        }, 100);
     }
 
     function isEndGame() {
@@ -118,6 +130,10 @@
         });
     }
 
+    function randomTen(min, max) {
+        return Math.round((Math.random() * (max - min) + min) / 10) * 10;
+    }
+
     function drawApple() {
         gameCanvas.fillStyle = APPLE_COLOR;
         gameCanvas.strokestyle = APPLE_BORDER_COLOR;
@@ -136,7 +152,7 @@
         if (didEatApple) {
             score += 1;
             document.getElementById('score').innerHTML = score;
-    createApple();
+            createApple();
         } else {
             snake.pop();
         }
@@ -152,7 +168,7 @@
         gameCanvas.fillRect(snakePart.x, snakePart.y, 10, 10);
         gameCanvas.strokeRect(snakePart.x, snakePart.y, 10, 10);
     }
-    
+
     function changeSnakeDirection(event) {
         const keyPress = event.keyCode;
         const ARROW_LEFT = 37;
@@ -177,11 +193,8 @@
         } else if (keyPress === ARROW_DOWN && !movingUp) {
             xdir = 0;
             ydir = 10;
-            }
+        }
     }
-
-    }
-
 </script>
 </body>
 </html>
