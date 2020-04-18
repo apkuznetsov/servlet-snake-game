@@ -142,8 +142,33 @@
     }
     }
 
+    function changeSnakeDirection(event) {
+        const keyPress = event.keyCode;
+        const ARROW_LEFT = 37;
+        const ARROW_RIGHT = 39;
+        const ARROW_UP = 38;
+        const ARROW_DOWN = 40;
+
+        const movingLeft = xdir === -10;
+        const movingRight = xdir === 10;
+        const movingUp = ydir === -10;
+        const movingDown = ydir === 10;
+
+        if (keyPress === ARROW_LEFT && !movingRight) {
+            xdir = -10;
+            ydir = 0;
+        } else if (keyPress === ARROW_UP && !movingDown) {
+            xdir = 0;
+            ydir = -10;
+        } else if (keyPress === ARROW_RIGHT && !movingLeft) {
+            xdir = 10;
+            ydir = 0;
+        } else if (keyPress === ARROW_DOWN && !movingUp) {
+            xdir = 0;
+            ydir = 10;
             }
-        });
+    }
+
     }
 
 </script>
