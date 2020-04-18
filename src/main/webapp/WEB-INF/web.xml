@@ -5,12 +5,12 @@
          version="3.0">
 
     <servlet>
-        <servlet-name>mainServlet</servlet-name>
-        <servlet-class>MainServlet</servlet-class>
+        <servlet-name>MenuServlet</servlet-name>
+        <servlet-class>MenuServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>mainServlet</servlet-name>
+        <servlet-name>MenuServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 

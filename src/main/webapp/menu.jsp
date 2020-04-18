@@ -10,23 +10,23 @@
 <head>
     <meta http-equiv="Content-Type"
           content="text/html; charset=ISO-8859-1">
-    <style>
-        <%@include file="/WEB-INF/css/style.css" %>
+    <style type="">
+        <%@include file="/style.css" %>
     </style>
 
-    <title>Начало</title>
+    <title>Меню</title>
 </head>
 
 <body>
-<h1>Начало</h1>
+<h1>Меню</h1>
 
 <div class="canvas-like-div">
-    <form action="${pageContext.request.contextPath}/"
-          method="post">
+    <form action="${pageContext.request.contextPath}/game">
 
         <div class="centered">
             <input type="submit"
-                   value=Начать>
+                   value="Начать игру"
+                   class="menu-button"/>
         </div>
     </form>
 </div>

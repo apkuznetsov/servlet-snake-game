@@ -40,6 +40,12 @@ form {
     transform: translate(-50%, -50%);
 }
 
+.menu-button {
+    color: white;
+    background-color: black;
+    border-color: white;
+}
+
 canvas {
     display: block;
     width: 300px;
