@@ -55,6 +55,34 @@
     gameCanvas.fillRect(0, 0, canvas.width, canvas.height);
     gameCanvas.strokeRect(0, 0, canvas.width, canvas.height);
 
+    function isEndGame() {
+        return isSnakeCollision() || isWallCollision();
+    }
+
+    function isSnakeCollision() {
+        for (let i = 4; i < snake.length; i++) {
+            const isCollision =
+                snake[i].x === snake[0].x &&
+                snake[i].y === snake[0].y;
+
+            if (isCollision) {
+                return true;
+            }
+        }
+    }
+
+    function isWallCollision() {
+        const isLeftWallCollision = snake[0].x < 0;
+        const isRightWallCollision = snake[0].x > canvas.width - 10;
+        const isTopWallCollision = snake[0].y < 0;
+        const isBottomWallCollision = snake[0].y > canvas.height - 10;
+
+        return isLeftWallCollision ||
+            isRightWallCollision ||
+            isTopWallCollision ||
+            isBottomWallCollision;
+    }
+
     function createApple() {
         appleXdir = randomTen(0, canvas.width - 10);
         appleYdir = randomTen(0, canvas.height - 10);
