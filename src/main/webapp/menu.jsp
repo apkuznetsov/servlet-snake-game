@@ -21,14 +21,18 @@
 <h1>Меню</h1>
 
 <div class="canvas-like-div">
-    <form action="${pageContext.request.contextPath}/game">
-
-        <div class="centered">
+    <div class="button-group">
+        <form action="${pageContext.request.contextPath}/game">
             <input type="submit"
                    value="Начать игру"
                    class="menu-button"/>
-        </div>
-    </form>
+        </form>
+        <form action="${pageContext.request.contextPath}/about">
+            <input type="submit"
+                   value="Справка"
+                   class="menu-button"/>
+        </form>
+    </div>
 </div>
 </body>
 </html>

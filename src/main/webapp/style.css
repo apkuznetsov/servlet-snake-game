@@ -31,7 +31,8 @@ form {
     position: relative;
 }
 
-.centered {
+.button-group {
+    display: inline-block;
     position: absolute;
     margin: 0;
     top: 50%;
@@ -40,10 +41,23 @@ form {
     transform: translate(-50%, -50%);
 }
 
+.button-group button:not(:last-child) {
+    border-bottom: none;
+}
+
+form {
+    display: list-item;
+}
+
+input {
+    display: block;
+}
+
 .menu-button {
-    color: white;
+    width: 100%;
     background-color: black;
     border-color: white;
+    color: white;
 }
 
 canvas {
