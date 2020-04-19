@@ -26,7 +26,31 @@
         <p class="gameover-p">Длина змейки: <%= request.getAttribute("score") %>
         </p>
         <p class="gameover-returning-p">Нажмите Enter, чтобы сыграть ещё раз</p>
-        <p class="gameover-returning-p">Нажмите Esc, чтобы перейти в меню</p>
+        <p class="gameover-returning-p">Нажмите ←, чтобы перейти в меню</p>
+
+        <script type="">
+            document.addEventListener("keydown", returnToPage);
+
+            function returnToPage(event) {
+                const keyPress = event.keyCode;
+                const ARROW_LEFT = 37;
+                const ENTER = 13;
+
+                let form = document.createElement('form');
+                form.method = 'GET';
+                form.innerHTML = '<input type="hidden">';
+
+                if (keyPress === ARROW_LEFT) {
+                    form.action = '${pageContext.request.contextPath}/menu';
+                    document.body.append(form);
+                    form.submit();
+                } else if (keyPress === ENTER) {
+                    form.action = '${pageContext.request.contextPath}/game';
+                    document.body.append(form);
+                    form.submit();
+                }
+            }
+        </script>
     </div>
 </div>
 </body>
