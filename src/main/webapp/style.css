@@ -83,3 +83,13 @@ canvas {
 .about-li {
     font-size: 16px;
 }
+
+.gameover-p {
+    color: white;
+    font-size: 18px;
+}
+
+.gameover-returning-p {
+    color: white;
+    font-size: 12px;
+}
