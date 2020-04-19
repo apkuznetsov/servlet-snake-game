@@ -10,6 +10,9 @@ public class GameoverServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        int score = Integer.parseInt(request.getParameter("score"));
+        request.setAttribute("score", score);
+
         getServletContext().getRequestDispatcher("/gameover.jsp").forward(request, response);
     }
 }
