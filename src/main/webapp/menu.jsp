@@ -21,7 +21,7 @@
 <h1>Меню</h1>
 
 <div class="canvas-like-div">
-    <div class="button-group">
+    <div class="centered-group">
         <form action="${pageContext.request.contextPath}/game">
             <input type="submit"
                    value="Начать игру"

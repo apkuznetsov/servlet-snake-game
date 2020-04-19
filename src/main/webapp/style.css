@@ -32,7 +32,7 @@ form {
     overflow: auto;
 }
 
-.button-group {
+.centered-group {
     display: inline-block;
     position: absolute;
     margin: 0;
@@ -42,7 +42,7 @@ form {
     transform: translate(-50%, -50%);
 }
 
-.button-group button:not(:last-child) {
+.centered-group button:not(:last-child) {
     border-bottom: none;
 }
 
