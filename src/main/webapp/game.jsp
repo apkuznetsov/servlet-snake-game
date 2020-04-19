@@ -21,8 +21,9 @@
 <h1>Игра</h1>
 
 <canvas id="game-canvas" width="300" height="300"></canvas>
-<div id="current-score-title">Длина змейки:</div>
-<div id="score">0</div>
+<input type="hidden"
+       id="score"
+       name="score">
 
 <script type="">
     const CANVAS_BORDER_COLOR = 'black';
@@ -34,8 +35,6 @@
     const APPLE_COLOR = 'violet';
     const APPLE_BORDER_COLOR = 'white';
 
-    let score = 0;
-
     let snake = [
         {x: 150, y: 150},
         {x: 140, y: 150},
@@ -43,6 +42,9 @@
         {x: 120, y: 150},
         {x: 110, y: 150}
     ];
+
+    let score = snake.length;
+    document.getElementById('score').value = snake.length;
 
     let xdir = 10;
     let ydir = 0;
@@ -61,13 +63,13 @@
 
     function startGame() {
         if (isEndGame()) {
-            const doesWantToRefresh = confirm("Длина змейки: " + score + "\n" +
+            const doesWantToRefresh = confirm("Длина змейки: " + snake.length + "\n" +
                 "Нажмите OK, чтобы продолжить");
 
             if (doesWantToRefresh === true) {
                 location.reload();
             } else if (doesWantToRefresh === false) {
-                window.location.href = "end.jsp";
+                window.location.href = "gameover.jsp";
             }
 
             return;
@@ -150,8 +152,7 @@
             snake[0].y === appleYdir;
 
         if (didEatApple) {
-            score += 1;
-            document.getElementById('score').innerHTML = score;
+            document.getElementById('score').value = snake.length;
             createApple();
         } else {
             snake.pop();
