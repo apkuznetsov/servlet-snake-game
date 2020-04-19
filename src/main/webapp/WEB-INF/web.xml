@@ -19,6 +19,11 @@
         <servlet-class>AboutServlet</servlet-class>
     </servlet>
 
+    <servlet>
+        <servlet-name>GameoverServlet</servlet-name>
+        <servlet-class>GameoverServlet</servlet-class>
+    </servlet>
+
     <servlet-mapping>
         <servlet-name>MenuServlet</servlet-name>
         <url-pattern>/</url-pattern>
@@ -34,4 +39,8 @@
         <url-pattern>/about</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>GameoverServlet</servlet-name>
+        <url-pattern>/gameover</url-pattern>
+    </servlet-mapping>
 </web-app>

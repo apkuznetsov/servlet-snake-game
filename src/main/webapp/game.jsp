@@ -21,9 +21,6 @@
 <h1>Игра</h1>
 
 <canvas id="game-canvas" width="300" height="300"></canvas>
-<input type="hidden"
-       id="score"
-       name="score">
 
 <script type="">
     const CANVAS_BORDER_COLOR = 'black';
@@ -44,7 +41,6 @@
     ];
 
     let score = snake.length;
-    document.getElementById('score').value = snake.length;
 
     let xdir = 10;
     let ydir = 0;
@@ -69,7 +65,14 @@
             if (doesWantToRefresh === true) {
                 location.reload();
             } else if (doesWantToRefresh === false) {
-                window.location.href = "gameover.jsp";
+                let form = document.createElement('form');
+                form.action = '${pageContext.request.contextPath}/gameover';
+                form.method = 'POST';
+                form.innerHTML = '<input id="score" type="hidden" name="score">';
+                document.body.append(form);
+                document.getElementById("score").value = snake.length;
+
+                form.submit();
             }
 
             return;
@@ -152,7 +155,6 @@
             snake[0].y === appleYdir;
 
         if (didEatApple) {
-            document.getElementById('score').value = snake.length;
             createApple();
         } else {
             snake.pop();
