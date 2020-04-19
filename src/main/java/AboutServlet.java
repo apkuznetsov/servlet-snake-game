@@ -1,4 +1,3 @@
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,9 +10,7 @@ public class AboutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        final String startJsp = "/about.jsp";
-        RequestDispatcher dispatcher = getServletContext().
-                getRequestDispatcher(startJsp);
-        dispatcher.forward(request, response);
+        getServletContext().
+                getRequestDispatcher("/about.jsp").forward(request, response);
     }
 }

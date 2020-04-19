@@ -1,4 +1,3 @@
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,9 +10,6 @@ public class MenuServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        final String menuJsp = "/menu.jsp";
-        RequestDispatcher dispatcher = getServletContext().
-                getRequestDispatcher(menuJsp);
-        dispatcher.forward(request, response);
+        getServletContext().getRequestDispatcher("/menu.jsp").forward(request, response);
     }
 }
