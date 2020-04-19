@@ -59,22 +59,14 @@
 
     function startGame() {
         if (isEndGame()) {
-            const doesWantToRefresh = confirm("Длина змейки: " + snake.length + "\n" +
-                "Нажмите OK, чтобы продолжить");
+            let form = document.createElement('form');
+            form.action = '${pageContext.request.contextPath}/gameover';
+            form.method = 'POST';
+            form.innerHTML = '<input id="score" type="hidden" name="score">';
+            document.body.append(form);
+            document.getElementById("score").value = snake.length;
 
-            if (doesWantToRefresh === true) {
-                location.reload();
-            } else if (doesWantToRefresh === false) {
-                let form = document.createElement('form');
-                form.action = '${pageContext.request.contextPath}/gameover';
-                form.method = 'POST';
-                form.innerHTML = '<input id="score" type="hidden" name="score">';
-                document.body.append(form);
-                document.getElementById("score").value = snake.length;
-
-                form.submit();
-            }
-
+            form.submit();
             return;
         }
 
