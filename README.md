@@ -1,5 +1,7 @@
 # ПОДРОБНЕЕ – README.pdf
 
+<img src="https://raw.githubusercontent.com/apkuznetsov/servlet-snake-game/master/README/screenshot.png">
+
 # Задание
 Написать распределённое клиент-серверное приложение, используя указанную технологию распределенной объектной обработки. 
 Приложение реализует игру «Змейка» со следующими правилами:
